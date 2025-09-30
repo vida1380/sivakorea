@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
-import datetime
+from django.utils import timezone
 
 
 class Category(models.Model):
@@ -70,7 +70,7 @@ class Order(models.Model):
     quantity = models.IntegerField(default=1)
     address = models.CharField(max_length=400, default='', blank=False)
     phone = models.CharField(max_length=20, blank=True)
-    date = models.DateField(default=datetime.datetime.today())
+     date = models.DateTimeField(default=timezone.now)
     status = models.BooleanField(default=False)
 
     def __str__(self):

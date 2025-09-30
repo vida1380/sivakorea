@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-sm)9d@&lh@-73ppl6ncby-7per_vx4ix8pe%m@7zav(2jw@a3i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://sivakoreashop.onrender.com']
+ALLOWED_HOSTS = ['sivakoreashop.onrender.com']
 
 
 # Application definition
@@ -120,12 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_URLS = ['static/']
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
